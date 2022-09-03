@@ -1,0 +1,58 @@
+ <ng-template  #childComponent>
+     <tr *ngIf="showState == true && interaction.canal === 'sms'" >
+        <td colspan="4" >
+            <div style="padding: 0.5% 0;">emetteur: a@outlook</div>
+            <div style="padding: 0.5% 0;"> <div>contenu:</div> <textarea style="width: 100%;margin: 1.5% 0;"></textarea></div>
+        </td>
+
+        <td colspan="4" >
+            <div style="padding: 0.5% 0;">destinataire : a@outlook.fr</div>
+            <div style="padding: 0.5% 0;"> <div>commentaire:</div> <textarea style="width: 100%;margin: 1.5% 0;"></textarea></div>
+        <td>
+    </tr>
+
+     <tr *ngIf="showState == true && interaction.canal === 'email'" >
+        <td colspan="8">
+            <div >
+                <td colspan="4" style="width:53%">
+                    <div style="padding: 0.5% 0;">emetteur: email@gmail.com</div>
+                    <div style="padding: 0.5% 0;">object : object : lorem lpsum is simply dummy text of ther printing and typesetting industry. Lorem lpsum has been the industry's standard dummy text ever since the 1500s </div>
+                    <div></div>
+                    <div style="padding: 0.5% 0;"> <div>contenu:</div> <textarea style="width: 100%;margin: 2% 0 0 0;"></textarea></div>
+                </td>
+
+                <td colspan="4" >
+                    <div style="padding: 0.5% 0;">destinataire : email@gmail.com</div>
+                    <div style="padding: 0.5% 0;">CC: email@gmail.com</div>
+                    <div style="padding: 0.5% 0;">pieces jointes: fichier.pdf fichier.pdf</div>
+                    <div style="padding: 0.5% 0;"> <div>commentaire:</div> <textarea style="width: 100%;margin: 1.5% 0;"></textarea></div>
+                <td>
+            </div>
+        </td>
+    </tr>
+
+    <ng-container *ngIf="showState == true && interaction.canal === 'courrier'">
+        <tr >
+            <td colspan="4" >
+                <div style="display:flex">
+                    <div>emetteur:</div> <div style="padding-left: 5%;"><div>M.L'expediteur</div><div>Appartement 12 Escalier C</div><div>a@outlook</div></div>
+                </div>
+            </td>
+
+            <td colspan="4" >
+                <div style="display:flex">
+                    <div>destinataire:</div> <div style="padding-left: 5%;"><div>M.L'expediteur</div><div>Appartement 12 Escalier C</div><div>a@outlook</div></div>
+                </div>
+            </td>
+
+
+        </tr> 
+        <tr >
+            <td colspan="8" >
+                <div style="padding: 0.5% 0;">object : lorem lpsum is simply dummy text of ther printing and typesetting industry. Lorem lpsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled</div>
+                <div > <div>commentaire:</div> <textarea style="width: 100%;margin: 0.5% 0;"></textarea></div>
+            </td>
+        </tr> 
+    </ng-container>
+
+</ng-template>

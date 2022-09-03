@@ -1,0 +1,33 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th style="max-width: 12.5%;">date creation</th>
+                <th style="max-width: 12.5%;">type</th>
+                <th style="max-width: 12.5%;">sens</th>
+                <th style="max-width: 12.5%;">canal</th>
+                <th style="max-width: 12.5%;">prm</th>
+                <th style="max-width: 12.5%;">interlocuteur</th>
+                <th style="max-width: 12.5%;">dossier</th>
+                <th style="max-width: 12.5%;">conseiller</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let interaction of interactions;let i=index" >
+               <tr (click)="loadDetail(i)">
+                    <td>{{interaction.dateCreation}}</td>
+                    <td>{{interaction.type}}</td>
+                    <td>{{interaction.sens}}</td>
+                    <td>{{interaction.canal}}</td>
+                    <td>{{interaction.prm}}</td>
+                    <td>{{interaction.interlocuteur}}</td>
+                    <td>{{interaction.dossier}}</td>
+                    <td>{{interaction.conseiller}}</td>
+               </tr>
+               <app-detail #wrapper [interaction]="interaction" [showState]="details[i]"   ></app-detail>
+               <ng-content  *ngTemplateOutlet=" wrapper.childComponent" ></ng-content>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
