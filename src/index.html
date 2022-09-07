@@ -11,3 +11,28 @@
   <app-root></app-root>
 </body>
 </html>
+
+
+<!--
+  1) ,2),3),4)
+12:46 AM
+If you don't use these and just use <app-detail>, the contents are loaded in a new tag called <app-detail>.
+12:47 AM
+so, their purpose is to remove of the <app-detail> tag.
+12:48 AM
+1)-8), all were used for the purpose of preventing the creation of new tags
+12:52 AM
+You can think of the wrapper as the id of the <app-detail> tag.
+12:54 AM
+Similarly, you can think of childComponent as an id.
+12:55 AM
+@ViewChild is a local component template querying mechanism, that cannot see the internals of its child components.
+12:58 AM
+@ViewChild("childComponent") childComponent:TemplateRef<any>;
+1:01 AM
+This is a statement that specifies that childComponent is the id of the detail component.
+1:01 AM
+now, you will have a basic understanding...
+1:03 AM
+The fastest way to understand is to run it yourself.
+-->
